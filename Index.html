@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CalculadoraDeCapibarass</title>
+    <link rel="stylesheet" href="./Estilos.css">
+</head>
+
+<body>
+    <header id="header">¿Cuantos capibaras vales?</header>
+    <form action="#" method="post" class="Calculadora">
+        <section class="ColorPiel">
+            <h4>Color piel</h4>
+            <div class="opciones">
+                <label for="blanco">Blanco</label>
+                <input type="radio" name="colorPiel" id="blanco" required>
+                <label for="marron">Marrón</label>
+                <input type="radio" name="colorPiel" id="marron" required>
+                <label for="negro">Negro</label>
+                <input type="radio" name="colorPiel" id="negro" required>
+            </div>
+        </section>
+        
+        <section class="Cabello">
+            <h4>Cabello</h4>
+            <div class="opciones">
+                <label for="peso">Liso</label>
+                <input type="radio" name="cabello" required>
+                <label for="peso">Ondulado</label>
+                <input type="radio" name="cabello" required>
+                <label for="peso">Risado</label>
+                <input type="radio" name="cabello" required>
+            </div>
+        </section>
+
+        <section class="ColorOjos">
+            <h4>Color ojos</h4>
+            <div class="opciones">
+            <label for="peso">Azul</label>
+            <input type="radio" name="colorOjos" required>
+            <label for="peso">Marron</label>
+            <input type="radio" name="colorOjos" required>
+            <label for="peso">Negro</label>
+            <input type="radio" name="colorOjos" required>
+            <label for="peso">Verde</label>
+            <input type="radio" name="colorOjos" required>
+            <label for="peso">Bicromia</label>
+            <input type="radio" name="colorOjos" required>
+            </div>
+        </section>
+
+        <section class="Cuerpo">
+            <h4>Cuerpo</h4>
+            <div class="opciones">
+            <label for="peso">Cuerpo 1</label>
+            <input type="radio" name="cuerpo" required>
+            <label for="peso">Cuerpo 2</label>
+            <input type="radio" name="cuerpo" required>
+            <label for="peso">Cuerpo 3</label>
+            <input type="radio" name="cuerpo" required>
+            <label for="peso">Cuerpo 4</label>
+            </div>
+        </section>
+
+        <section class="Altura">
+            <h4>Altura</h4>
+            <input type="range" name="altura" id="alturaRange" min="50" max="250" step="1" required oninput="updateAltura(this.value)">
+            <span id="alturaValue">150</span>
+        </section>
+
+        <section class="Edad">
+            <h4>Edad</h4>
+            <input type="range" name="edad" id="edadRange" min="15" max="80" step="1" required oninput="updateEdad(this.value)">
+            <span id="edadValue">15</span>
+        </section>
+        
+        <script>
+            function updateEdad(value) {
+                document.getElementById('edadValue').textContent = value;
+            }
+            function updateAltura(value) {
+                document.getElementById('alturaValue').textContent = value;
+            }
+        </script>
+        
+        <p><input type="submit" value="Calcular"></p>
+
+        
+    </form>
+</body>
+<footer id="footer">
+    <p>Copyright &copy; 2021 CalculadoraDeCamellos. Todos los derechos reservados.</p>
+</footer>
+</html>
